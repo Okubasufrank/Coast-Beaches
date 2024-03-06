@@ -1,3 +1,31 @@
+
+@import url();
 body{
-    background-color: aqua;
+    background-color: rgb(6, 71, 93);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    padding: ;
+    background-color: #46ADD3;
+    color: aliceblue;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+}
+
+.list li{
+    margin: 10px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.site{
+    background-image: ;
 }
