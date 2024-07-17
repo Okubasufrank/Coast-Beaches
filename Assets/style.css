@@ -61,12 +61,16 @@ body{
     display: inline-flex;
 }
 
-.navbar-icons a {
-    margin-right: 40px;
+.navbar-icons{
+    display: flex;
 }
 
 .navbar-icons img {
     height: 24px; /* Adjust as necessary */
+}
+#home{
+    margin-right: 40px;
+    margin-left: 0px;
 }
 #btn1 {
     display: inline-block;
@@ -93,8 +97,9 @@ body{
 }
 
 #btn2:hover{
-    background-color: #d3493e;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #d3493e;
 
 }
 
@@ -205,4 +210,37 @@ body{
 
 .search-bar button:hover {
     background-color: #555;
+}
+
+.patners{
+    background-color: #ffffff;
+    margin: 50px;
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    width: 95%;
+    display: inline-flex;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+}
+
+.logos img {
+    height: 160px; /* Adjust the height of the logos */
+    margin: 0 15px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(40%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
