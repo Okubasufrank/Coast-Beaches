@@ -170,7 +170,11 @@ body{
 .search-bar {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+}
+
+.search-bar img{
+    height: 30px;
 }
 
 .search-bar input {
