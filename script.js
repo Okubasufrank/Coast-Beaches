@@ -1,4 +1,5 @@
 const videos = [
+    "./Assets/videos/127475-743515470 (1).mp4",
     "./Assets/videos/81467-575185262_small.mp4",
     "./Assets/videos/81763-577427912.mp4"
 ]

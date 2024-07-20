@@ -18,6 +18,7 @@ body{
 .nav{
     display: flex;
     font-family: Tangerine;
+    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
     height: 60px;
@@ -44,13 +45,14 @@ body{
 .list{
     list-style: none;
     display: flex;
-    margin-right: 30px;
 }
 
 .list li{
     margin: 10px;
+    margin-right: 30px;
     text-decoration: none;
     color: aliceblue;
+    display: inline;
 }
 
 .site{
@@ -63,11 +65,21 @@ body{
 
 .navbar-icons{
     display: flex;
+    gap: 2px;
+    width: 400px;
 }
 
 .navbar-icons img {
-    height: 24px; /* Adjust as necessary */
+    height: 24px;
+    gap: 3px;
 }
+
+@media (max-width: 768px) {
+    .list {
+        display: none;
+    }
+}
+
 #home{
     margin-right: 40px;
     margin-left: 0px;
@@ -133,7 +145,7 @@ body{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    opacity: 40%;
+    opacity: 80%;
 }
 
 .overlay {
