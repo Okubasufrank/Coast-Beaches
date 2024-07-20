@@ -262,13 +262,6 @@ body{
     height: 700px;
     font-size: 15px;
 }
-.text2{
-    width: 50%;
-    background-color: rgb(248, 248, 248);
-    height: 700px;
-    border-radius: 10px;
-    overflow: hidden;
-}
 .content {
     text-align: center;
     padding: 50px;
@@ -305,6 +298,68 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.buttonc:hover {
     background-color: #a01745;
+}
+
+.card{
+    width: 50%;
+    background-color: rgb(248, 248, 248);
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.card img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 5s ease; /* Zoom effect */
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Scale up the image */
+}
+
+.over {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(192, 47, 47, 0.7), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); /* Gradient opacity effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px; /* Adjust based on your preference */
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.card:hover .over {
+    opacity: 1;
+}
+
+.over h2 {
+    font-size: 2em;
+    margin: 0 0 0 80px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.over p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    margin: 0 0 0 80px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 5s ease, transform 1s ease;
+}
+
+.card:hover .over p {
+    opacity: 1;
+    transform: translateY(0px); /* Move up smoothly but not reach the middle */
 }
