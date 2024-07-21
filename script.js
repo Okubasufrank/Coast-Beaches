@@ -7,8 +7,12 @@ const videos = [
 let currentVideoIndex = 0;
 const videoElement = document.getElementById('slideshow-video');
 
+if(videoElement){
+    console.log('video element found')
+
 function playNextVideo(){
     currentVideoIndex = (currentVideoIndex + 1)% videos.length;
+    console.log('play next video: ${videos[currentVideoIndex]}');
     videoElement.src = videos[currentVideoIndex];
     videoElement.play();
 }
@@ -16,6 +20,10 @@ function playNextVideo(){
 videoElement.addEventListener('ended', playNextVideo);
 
 window.onload = function(){
+    console.log('window loaded')
     videoElement.src = videos[currentVideoIndex];
     videoElement.play();
 };
+}else{
+    console.error('video elemet not found');
+}
