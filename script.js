@@ -25,5 +25,5 @@ window.onload = function(){
     videoElement.play();
 };
 }else{
-    console.error('video elemet not found');
+    console.error('video elemet not found')
 }
