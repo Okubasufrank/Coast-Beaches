@@ -30,19 +30,40 @@ window.onload = function(){
 
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.numb');
-    counters.forEach(counter => {
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // 50% of the element must be visible to trigger the animation
+    };
+
+    const startCounting = (entry) => {
+        const counter = entry.target;
         counter.innerText = '0';
-        const updateCounter =() => {
-            const target = +counter.getAttribute('data-target');
+        const target = +counter.getAttribute('data-target');
+        const updateCounter = () => {
             const count = +counter.innerText;
-            const increament = target /200; //change 200 to control speed
-            if (count < tsrget){
-                counter.innerText = '${Math.ceil(count + increament)}';
-                setTimeout(updateCounter, 10); //change 10 to control speed
-            } else{
-                counter.innerText = '${target}'; //ensure the final value is correct
+            const increment = target / 200; // Change 200 to control speed
+            if (count < target) {
+                counter.innerText = `${Math.ceil(count + increment)}`;
+                setTimeout(updateCounter, 10); // Change 10 to control speed
+            } else {
+                counter.innerText = `${target}`; // Ensure the final value is correct
             }
         };
         updateCounter();
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounting(entry);
+                observer.unobserve(entry.target); // Stop observing after the animation has started
+            }
+        });
+    }, options);
+
+    counters.forEach(counter => {
+        observer.observe(counter);
     });
 });
