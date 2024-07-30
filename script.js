@@ -27,3 +27,22 @@ window.onload = function(){
 }else{
     console.error('video elemet not found')
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.numb');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter =() => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increament = target /200; //change 200 to control speed
+            if (count < tsrget){
+                counter.innerText = '${Math.ceil(count + increament)}';
+                setTimeout(updateCounter, 10); //change 10 to control speed
+            } else{
+                counter.innerText = '${target}'; //ensure the final value is correct
+            }
+        };
+        updateCounter();
+    });
+});

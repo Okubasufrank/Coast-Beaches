@@ -382,3 +382,39 @@ body{
     opacity: 1;
     transform: translateY(0px); /* Move up smoothly but not reach the middle */
 }
+
+.numbers {
+    background-color: rgb(232, 219, 219);
+    font-family: Poppins;
+    margin: 50px;
+    height: 350px;
+    position: relative;
+    background-size: cover;
+    width: 95%;
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    align-items: center;
+}
+
+.counter{
+    text-align: center;
+}
+
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.numb{
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+}
