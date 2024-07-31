@@ -39,18 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startCounting = (entry) => {
         const counter = entry.target;
-        counter.innerText = '0';
         const target = +counter.getAttribute('data-target');
+        const increment = target / 200; // Change 200 to control speed
+
+        let count = 0;
         const updateCounter = () => {
-            const count = +counter.innerText;
-            const increment = target / 200; // Change 200 to control speed
+            count += increment;
             if (count < target) {
-                counter.innerText = `${Math.ceil(count + increment)}`;
+                counter.innerText = `${Math.ceil(count)}`;
                 setTimeout(updateCounter, 10); // Change 10 to control speed
             } else {
-                counter.innerText = `${target}`; // Ensure the final value is correct
+                counter.innerText = `${target}+`; // Ensure the final value is correct and add "+"
             }
         };
+
         updateCounter();
     };
 

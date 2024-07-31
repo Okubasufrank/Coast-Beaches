@@ -382,12 +382,27 @@ body{
     opacity: 1;
     transform: translateY(0px); /* Move up smoothly but not reach the middle */
 }
+.titl{
+    background-color: rgb(232, 219, 219);
+    font-family: Poppins;
+    margin: 0px 0px 0 50px;
+    height: 100px;
+    position: relative;
+    width: 95%;
+    padding: 100px;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+}
 
+.titl h2{
+    font-size: 40px;
+}
 .numbers {
     background-color: rgb(232, 219, 219);
     font-family: Poppins;
-    margin: 50px;
-    height: 350px;
+    margin: 0 50px 50px 50px;
+    height: 500px;
     position: relative;
     background-size: cover;
     width: 95%;
